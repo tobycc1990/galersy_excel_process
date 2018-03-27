@@ -91,7 +91,7 @@ for each_input_file in input_file_list:
         row_charc = '本人'
 
         # insert self row
-        row = [member_count, row_name, row_id, row_charc, member_cost]
+        row = [int(member_count), str(row_name), str(row_id), str(row_charc), float(member_cost)]
         output_sheet.append(row)
 
         # insert relate row
@@ -101,7 +101,7 @@ for each_input_file in input_file_list:
             if check_id(row_id) != 0:
                 sys.exit(-1)
             row_charc = '亲属'
-            row = [member_count, row_name, row_id, row_charc, member_cost]
+            row = [int(member_count), str(row_name), str(row_id), str(row_charc), float(member_cost)]
             output_sheet.append(row)
 
     # save output file
